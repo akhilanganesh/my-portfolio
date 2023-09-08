@@ -1,0 +1,105 @@
+import type { Config } from 'tailwindcss'
+
+const colors = require('tailwindcss/colors')
+// console.log(colors)
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      screens: {
+        'sm-h': { 'raw': '(min-height: 680px)' }
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      maxWidth: {
+        '30%': '30%',
+        '50%': '50%',
+        '60%': '60%',
+        '70%': '70%',
+        '75%': '75%',
+        '80%': '80%',
+        '90%': '90%',
+      },
+      colors: {
+        // 'theme_bg': '#D1BAA1',
+        // 'theme_fg': '#281E17',
+        // 'theme_nav': '#A88A6B',
+        // 'theme_item1': '#913930',
+        // 'theme_item2': '#A58E48',
+        'theme_white':      colors.slate['100'], //'#EAF4F4', //colors.zinc['200']
+        'theme_offwhite':   '#E1FFEA', 
+        'theme_black':      colors.gray['900'],
+        'theme_lightgray':  colors.gray['300'],
+        'theme_darkgray':   colors.gray['700'],
+        'theme_color1':     colors.emerald['500'], // colored
+        'theme_color1b':    colors.emerald['200'], // toned
+        'theme_color2':     '#F64740', // colors.rose['600'], // or colors.teal['500']
+        'theme_color2b':    '#FD8A86', // colors.rose['400'],
+        'theme_color3':     colors.cyan['600'],
+      },
+      keyframes: {
+        wiggle: {
+          '0%':  { transform: 'rotate(-1.5deg)'},
+          '15%': { transform: 'rotate(1.5deg)' },
+          '30%': { transform: 'rotate(0deg)' },
+          '45%': { transform: 'rotate(0deg)' },
+        },
+        wiggle2: {
+          '0%':  { transform: 'rotate(-6deg)'},
+          '15%': { transform: 'rotate(6deg)' },
+          '30%': { transform: 'rotate(0deg)' },
+          '45%': { transform: 'rotate(0deg)' },
+        },
+        stretch: {
+          '0%':  { transform: 'scale(1)' },
+          '25%': { transform: 'scale(1.2)' },
+          '50%': { transform: 'scale(1)' },
+          '75%': { transform: 'scale(0.8)' },
+        },
+        pulse_out: {
+          '0%':   { 'box-shadow': '0 0 0 0px rgba(0, 0, 0, 0.2)' },
+          '100%': { 'box-shadow': '0 0 0 20px rgba(0, 0, 0, 0)' }
+        },
+        heartbeat: {
+          '0%':   { transform: 'scale(1)' },
+          '30%':  { transform: 'scale(0.9)' },
+          '50%':  { transform: 'scale(1)' },
+          // '60%':  { transform: 'scale(1)' },
+          '80%':  { transform: 'scale(0.9)' },
+          '100%': { transform: 'scale(1)' }
+        },
+        heartbeat2: {
+          '0%':   { transform: 'scale(1)' },
+          '30%':  { transform: 'scale(0.95)' },
+          '50%':  { transform: 'scale(1)' },
+          // '60%':  { transform: 'scale(1)' },
+          '80%':  { transform: 'scale(0.95)' },
+          '100%': { transform: 'scale(1)' }
+        },
+        spin: {
+          '0%':  { transform: 'rotate(360deg)' },
+          '20%': { transform: 'rotate(0deg)' },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 0.8s ease-in-out infinite',
+        wiggle2: 'wiggle2 0.8s ease-in-out infinite',
+        spin: 'spin 1s ease-in-out infinite',
+        pulse_out: 'pulse_out 1.5s infinite',
+        heartbeat: 'heartbeat 1.2s ease 0s infinite',
+        heartbeat2: 'heartbeat2 1.2s ease 0s infinite',
+        // pulse: 'stretch 4s ease-linear infinite',
+      },
+    },
+  },
+  plugins: [],
+}
+export default config
