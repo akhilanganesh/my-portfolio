@@ -54,7 +54,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head> */}
-      <body className={roboto.className}>{children}</body>
+      <body className={`${roboto.className} bg-theme-color1`}>{children}</body>
     </html>
   )
 }

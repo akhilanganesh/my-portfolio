@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-A site to host my projects, skills, and contact details.
+A site to host my projects, skills, and contact details. Hosting on Vercel.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

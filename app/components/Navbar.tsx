@@ -1,7 +1,7 @@
 export default function Navbar({ /*currentPage*/ }) {
   return (
-    <nav className="w-full top-0 fixed overflow-hidden bg-theme-color1 border-gray-200 dark:bg-theme-color1 z-50">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between md:mx-auto">
+    <nav className="w-full fixed top-0 overflow-hidden bg-theme-color1 border-gray-200 dark:bg-theme-color1 z-50">
+      <div className="max-w-screen flex flex-wrap items-center justify-between md:mx-auto">
         <a href="/" className="flex items-center">
           <img src='/logo.png' alt="AG" className="w-10 m-3 text-theme-color1" />
           {/* <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-theme-color1">AG</span> */}

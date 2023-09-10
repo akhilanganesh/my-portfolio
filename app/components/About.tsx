@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function About() {
   return (
-    <div className="flex flex-col md:flex-row md:space-x-2 max-w-screen px-3 sm:px-0 sm:max-w-80% md:max-w-60% mx-auto text-theme-black bg-white">
+    <div className="flex flex-col md:flex-row md:space-x-2 max-w-screen px-3 sm:px-0 sm:max-w-80% md:max-w-60% mx-auto text-theme-black bg-theme-white">
       <div className="md:basis-3/5 flex-col text-xl space-y-3">
         <h2 className="text-4xl justify-center font-bold">About Me</h2>
         <div className="m-auto items-center place-content-center flex md:hidden">

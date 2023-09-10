@@ -4,8 +4,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 export default function Front() {
   return (
-    <div className="bg-theme-color1 w-screen p-0 m-0">
-      <div className="flex flex-col pb-4 pt-8 sm-h:pt-0 px-2 md:px-0 mx-auto rounded-3xl max-w-full md:max-w-50% min-h-screen items-center">
+    <div className="bg-theme-color1 w-screen">
+      <div className="flex flex-col pb-4 pt-16 md-h:pt-10 px-2 md:px-0 mx-auto rounded-3xl max-w-full md:max-w-50% min-h-screen items-center">
         <div className="items-center flex flex-col my-auto">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src='/me.jpg' alt="Me" className="w-32 md:w-44 rounded-full m-0" />
