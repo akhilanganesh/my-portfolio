@@ -1,7 +1,7 @@
 export default function Navbar({ /*currentPage*/ }) {
   return (
-    <nav className="w-full top-0 fixed overflow-hidden bg-theme-color1 border-gray-200 dark:bg-theme-color1 z-50">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between md:mx-auto">
+    <nav className="w-full fixed top-0 overflow-hidden bg-theme-color1 border-gray-200 dark:bg-theme-color1 z-50">
+      <div className="max-w-screen flex flex-wrap items-center justify-between md:mx-auto">
         <a href="/" className="flex items-center">
           <img src='/logo.png' alt="AG" className="w-10 m-3 text-theme-color1" />
           {/* <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-theme-color1">AG</span> */}
@@ -13,11 +13,11 @@ export default function Navbar({ /*currentPage*/ }) {
           </svg> */}
         </button>
         <div className="hidden w-full md:block md:w-auto md:text-xl m-4" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+          {/* <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
             <SNavLink name="Home" uri="" />
             <NavLink name="About" uri="about" />
             <NavLink name="Contact" uri="contact" />
-          </ul>
+          </ul> */}
         </div>
       </div>
     </nav>

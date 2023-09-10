@@ -35,7 +35,8 @@ const config: Config = {
     extend: {
       screens: {
         'xs': '320px',
-        'sm-h': { 'raw': '(min-height: 500px)' }
+        'sm-h': { 'raw': '(min-height: 500px)' },
+        'md-h': { 'raw': '(min-height: 720px)' },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
