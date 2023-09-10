@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* 
 :root {
   --foreground: black;
@@ -13,6 +14,12 @@
     --background: white;
   }
 }*/
+
+@media (prefers-reduced-motion: no-preference) {
+  .hover\:motion-safe\:fa-shake:hover {
+    animation: fa-shake 1.5s infinite linear;
+  }
+}
 
 body {
   /* color: var(--foreground);

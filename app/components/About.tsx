@@ -11,11 +11,10 @@ export default function About() {
           from UC San Diego with a Bachelor&apos;s in Computer Science. I became interested in software 
           development in high school when I had the chance to make my own game based in Java. Since 
           then, creating fun with software has always been a key motivator in my journey with tech.</p>
-        <p className="text-theme-darkgray">Currently, I&apos;m based in Cupertino, California. 
+        <p className="text-theme-darkgray">I&apos;m currently based near San Jose, California. 
           I am looking for a Software Engineering role to contribute my skills towards the development 
           of sustainable and scalable software systems and solutions. I&apos;m primarily drawn to 
-          backend and cloud development, especially as the world becomes more interconnected and tech 
-          expands horizontally at an ever faster scale.</p>
+          backend and cloud development, but I&apos;m always open to explore.</p>
       </div>
       <div className="md:basis-2/5 hidden md:flex">
         <AboutImg inside={false} />

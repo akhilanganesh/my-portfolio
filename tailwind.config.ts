@@ -125,6 +125,7 @@ const config: Config = {
         pulse_out: 'pulse_out 1.5s infinite',
         heartbeat: 'heartbeat 1.2s ease 0s infinite',
         heartbeat2: 'heartbeat2 1.2s ease 0s infinite',
+        // 'fa-shake': 'fa-shake 1.5s infinite linear',
         // pulse: 'stretch 4s ease-linear infinite',
       },
     },
