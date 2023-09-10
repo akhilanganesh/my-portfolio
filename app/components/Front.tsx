@@ -44,9 +44,9 @@ interface FAIconProps {
 
 function FAIcon({ icon, url }: FAIconProps) {
   return (
-    <div className="bg-theme-color2 rounded-xl h-12 w-12 flex items-center justify-center hover:motion-safe:animate-wiggle2 active:animate-none active:bg-theme-color2b transition ease-in duration-200">
+    <div className="bg-theme-color2 rounded-xl h-12 w-12 flex items-center justify-center hover:motion-safe:fa-shake active:animate-none active:bg-theme-color2b transition ease-in duration-200">
       <a href={url} className="m-0" target="_blank">
-        <FontAwesomeIcon icon={icon} size="2x" className="" style={{ color: '#fff', }} />
+        <FontAwesomeIcon icon={icon} className="text-4xl text-white" />
       </a>
     </div>
   )
