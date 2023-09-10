@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
-    <main className="bg-theme_white flex flex-col space-y-0.5">
+    <main className="bg-theme_white flex flex-col space-y-10">
       <Navbar />
       <Front />
       <About />

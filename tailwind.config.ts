@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 
+const plugin = require('tailwindcss/plugin')
 const colors = require('tailwindcss/colors')
 // console.log(colors)
 
@@ -9,10 +10,32 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  // plugins: [
+  //   plugin(({ matchUtilities, theme }: any) => {
+  //     matchUtilities(
+  //       {
+  //         'rotate-by-x': (value: string) => ({
+  //           rotate: `x ${value}`
+  //         }),
+  //         '-rotate-by-x': (value: string) => ({
+  //           rotate: `x -${value}`
+  //         }),
+  //         'rotate-by-y': (value: string) => ({
+  //           rotate: `y ${value}`
+  //         }),
+  //         '-rotate-by-y': (value: string) => ({
+  //           rotate: `y -${value}`
+  //         }),
+  //       },
+  //       { values: theme('rotate') }
+  //     )
+  //   }),
+  // ],
   theme: {
     extend: {
       screens: {
-        'sm-h': { 'raw': '(min-height: 680px)' }
+        'xs': '320px',
+        'sm-h': { 'raw': '(min-height: 500px)' }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -34,16 +57,19 @@ const config: Config = {
         // 'theme_nav': '#A88A6B',
         // 'theme_item1': '#913930',
         // 'theme_item2': '#A58E48',
-        'theme_white':      colors.slate['100'], //'#EAF4F4', //colors.zinc['200']
-        'theme_offwhite':   '#E1FFEA', 
-        'theme_black':      colors.gray['900'],
-        'theme_lightgray':  colors.gray['300'],
-        'theme_darkgray':   colors.gray['700'],
-        'theme_color1':     colors.emerald['500'], // colored
-        'theme_color1b':    colors.emerald['200'], // toned
-        'theme_color2':     '#F64740', // colors.rose['600'], // or colors.teal['500']
-        'theme_color2b':    '#FD8A86', // colors.rose['400'],
-        'theme_color3':     colors.cyan['600'],
+        'theme-white':      colors.slate['100'], //'#EAF4F4', //colors.zinc['200']
+        'theme-offwhite':   '#E1FFEA', 
+        'theme-black':      colors.gray['900'],
+        'theme-lightgray':  colors.gray['300'],
+        'theme-gray':       colors.stone['200'],
+        'theme-darkgray':   colors.gray['700'],
+        'theme-color1':     colors.slate['700'],
+        'theme-color2':     colors.emerald['500'], // colored
+        'theme-color2b':    colors.emerald['200'], // toned
+        'theme-color3':     '#F64740', // colors.rose['600'], // or colors.teal['500']
+        'theme-color3b':    '#FD8A86', // colors.rose['400'],
+        'theme-color4':     colors.cyan['600'],
+        'theme-color4b':    colors.cyan['400'],
       },
       keyframes: {
         wiggle: {
@@ -53,10 +79,12 @@ const config: Config = {
           '45%': { transform: 'rotate(0deg)' },
         },
         wiggle2: {
-          '0%':  { transform: 'rotate(-6deg)'},
-          '15%': { transform: 'rotate(6deg)' },
-          '30%': { transform: 'rotate(0deg)' },
-          '45%': { transform: 'rotate(0deg)' },
+          '0%':  { transform: 'rotate(0deg)' },
+          '8%':  { transform: 'rotate(-9deg)' },
+          '16%': { transform: 'rotate(9deg)' },
+          '32%': { transform: 'rotate(-9deg)' },
+          '40%': { transform: 'rotate(9deg)' },
+          '48%': { transform: 'rotate(0deg)' },
         },
         stretch: {
           '0%':  { transform: 'scale(1)' },
@@ -100,6 +128,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
 }
 export default config
