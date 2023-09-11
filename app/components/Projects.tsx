@@ -7,7 +7,8 @@ export default function Projects() {
         <h2 className="text-4xl font-bold">Projects</h2>
         <p className="text-xl text-theme-darkgray">Here&apos;s a list of software projects I&apos;ve produced over the past few years.</p>
       </div>
-      <div className="bg-neutral-300 border-y-0 border-theme-lightgray shadow-inner max-w-full min-h-[32rem] max-h-[32rem] flex flex-row gap-12 overflow-x-scroll overflow-y-hidden p-8">
+      <div className="bg-neutral-300 border-y-0 border-theme-lightgray snap-x snap-mandatory shadow-inner max-w-full min-h-[32rem] max-h-[32rem] flex flex-row gap-12 overflow-y-hidden p-8">
+        <div className="flex-none w-1/2 min-w-screen min-h-screen inline"></div>
         <Project name="Snek Compiler (in Rust)">
           Sample description from here on out yeah everything goes out to everything.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper eget duis at tellus. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Velit aliquet sagittis id consectetur purus ut. Leo urna molestie at elementum. Est ullamcorper eget nulla facilisi etiam dignissim diam. Eu turpis egestas pretium aenean pharetra. Amet consectetur adipiscing elit ut. Pellentesque habitant morbi tristique senectus et. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Urna molestie at elementum eu facilisis sed odio morbi quis. Tellus rutrum tellus pellentesque eu tincidunt tortor.
@@ -35,6 +36,7 @@ export default function Projects() {
         <Project name="Test 6">
           Sample description from here on out yeah everything goes out to everything.
         </Project>
+        <div className="flex-none w-1/2 min-w-screen min-h-screen inline"></div>
       </div>
     </div>
   );
@@ -47,8 +49,8 @@ interface ProjectProps {
 
 function Project({ name, children }: ProjectProps) {
   return (
-    <div className="shrink-0 max-w-lg shadow-md bg-slate-100 rounded-md p-6 w-[32rem] max-h-90%">
-      <div className="max-h-full overflow-y-scroll space-y-3">
+    <div className="shrink-0 snap-center snap-always max-w-lg shadow-md bg-slate-100 rounded-md p-6 w-[32rem] max-h-90%">
+      <div className="max-h-full overflow-clip space-y-3">  {/*overflow-y-scroll overscroll-y-contain*/}
         <h3 className="text-2xl text-theme-black font-bold">{name}</h3>
         <p className="text-xl text-theme-darkgray">{children}</p>
       </div>
