@@ -9,9 +9,9 @@ import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
-    <main className="bg-theme-white flex flex-col">
+    <main className="flex flex-col selection:bg-emerald-500 selection:text-theme-white">
       <Navbar />
-      <div className="m-0 p-0 space-y-10">
+      <div className="m-0 p-0 space-y-20">
         <Front />
         <About />
         <Projects />

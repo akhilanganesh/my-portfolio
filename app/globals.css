@@ -17,7 +17,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .hover\:motion-safe\:fa-shake:hover {
-    animation: fa-shake 1.5s infinite linear;
+    animation: fa-shake 1.5s linear;
   }
 }
 

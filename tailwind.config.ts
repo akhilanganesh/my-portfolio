@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
-const plugin = require('tailwindcss/plugin')
+// const plugin = require('tailwindcss/plugin')
+const defTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 // console.log(colors)
 
@@ -32,9 +33,12 @@ const config: Config = {
   //   }),
   // ],
   theme: {
+    screens: {
+      'xs': '376px',
+      ...defTheme.screens,
+    },
     extend: {
       screens: {
-        'xs': '320px',
         'sm-h': { 'raw': '(min-height: 500px)' },
         'md-h': { 'raw': '(min-height: 720px)' },
       },
@@ -65,7 +69,9 @@ const config: Config = {
         'theme-gray':       colors.stone['200'],
         'theme-darkgray':   colors.gray['700'],
         'theme-color1':     colors.slate['700'],
-        'theme-color2':     colors.emerald['500'], // colored
+        'theme-color1b':    colors.slate['400'],
+        'theme-color1c':    colors.slate['300'],
+        'theme-color2':     colors.emerald['400'], // colored
         'theme-color2b':    colors.emerald['200'], // toned
         'theme-color3':     '#F64740', // colors.rose['600'], // or colors.teal['500']
         'theme-color3b':    '#FD8A86', // colors.rose['400'],
