@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Roboto, Roboto_Mono } from 'next/font/google'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -9,6 +9,10 @@ config.autoAddCss = false;
 const roboto = Roboto({
   subsets: ['latin'],
   weight: '400'
+})
+
+export const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
