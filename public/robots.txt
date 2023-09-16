@@ -1,4 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /me.jpg
+Disallow: /bg-me.jpg
 Disallow: /Akhilan Ganesh Resume.pdf

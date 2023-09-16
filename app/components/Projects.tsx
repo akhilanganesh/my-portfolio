@@ -1,57 +1,95 @@
-// import '../styles/Projects.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHandshakeSimple, faCode, faArrowRight, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
+import { robotoMono } from "../layout";
+
+const faContribution = faHandshakeSimple;
 
 export default function Projects() {
   return (
-    <div className="max-w-full pt-10">
-      <div className="max-w-screen sm:max-w-80% md:max-w-60% mx-auto space-y-3 mb-8">
-        <h2 className="text-4xl font-bold">Projects</h2>
-        <p className="text-xl text-theme-darkgray">Here&apos;s a list of software projects I&apos;ve produced over the past few years.</p>
+    <div className="max-w-full pb-40">
+      <div className="max-w-screen sm:max-w-90% md:max-w-80% mx-auto px-3 sm:px-0 space-y-1 mb-8">
+        <h2 className="text-center md:text-left text-3xl sm:text-4xl font-bold text-theme-white">Projects and Contributions</h2>
+        <p className="text-base sm:text-lg -ml-3 p-3 text-theme-lightgray rounded-md hover:bg-theme-black/50 transition">
+          Here&apos;s a curated list of software projects <span className="whitespace-nowrap inline">(<FontAwesomeIcon 
+          icon={faCode} className="inline text-sm sm:text-base" />)</span> and contributions <span className="whitespace-nowrap 
+          inline">(<FontAwesomeIcon icon={faContribution} className="inline text-sm sm:text-base" />)</span> I&apos;ve made over 
+          the past few years.
+        </p>
       </div>
-      <div className="bg-neutral-300 border-y-0 border-theme-lightgray shadow-inner max-w-full min-h-[32rem] max-h-[32rem] flex flex-row gap-12 overflow-x-scroll overflow-y-hidden p-8">
-        <Project name="Snek Compiler (in Rust)">
-          Sample description from here on out yeah everything goes out to everything.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Semper eget duis at tellus. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Velit aliquet sagittis id consectetur purus ut. Leo urna molestie at elementum. Est ullamcorper eget nulla facilisi etiam dignissim diam. Eu turpis egestas pretium aenean pharetra. Amet consectetur adipiscing elit ut. Pellentesque habitant morbi tristique senectus et. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Urna molestie at elementum eu facilisis sed odio morbi quis. Tellus rutrum tellus pellentesque eu tincidunt tortor.
-
-          Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. In pellentesque massa placerat duis ultricies. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. At elementum eu facilisis sed odio morbi quis commodo odio. Consectetur adipiscing elit ut aliquam purus sit. Scelerisque eu ultrices vitae auctor eu augue. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Scelerisque viverra mauris in aliquam sem fringilla ut. Vitae et leo duis ut. Ipsum nunc aliquet bibendum enim facilisis gravida. Lacus vel facilisis volutpat est.
-
-          Leo in vitae turpis massa sed elementum tempus egestas. Nisl purus in mollis nunc sed id semper. Odio aenean sed adipiscing diam donec. A diam sollicitudin tempor id eu nisl nunc mi. Posuere morbi leo urna molestie at elementum eu facilisis sed. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Posuere morbi leo urna molestie at elementum eu facilisis. Mi in nulla posuere sollicitudin aliquam. Morbi non arcu risus quis varius quam. Ac felis donec et odio. Eu mi bibendum neque egestas congue.
-
-          Scelerisque in dictum non consectetur a erat nam at. Blandit aliquam etiam erat velit scelerisque. Sed cras ornare arcu dui vivamus arcu felis bibendum. Ut sem nulla pharetra diam sit amet. Integer eget aliquet nibh praesent tristique magna sit. Ornare arcu odio ut sem. Lacus suspendisse faucibus interdum posuere. Dignissim enim sit amet venenatis urna cursus eget nunc. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Leo vel fringilla est ullamcorper eget. Ultrices eros in cursus turpis massa tincidunt. Feugiat in fermentum posuere urna nec tincidunt. Adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Vestibulum lectus mauris ultrices eros. Egestas congue quisque egestas diam in arcu cursus euismod. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper.
-
-          Id consectetur purus ut faucibus pulvinar. Justo donec enim diam vulputate ut pharetra sit amet aliquam. Etiam sit amet nisl purus in. Eget nulla facilisi etiam dignissim diam quis. Sed sed risus pretium quam. Facilisis magna etiam tempor orci eu lobortis elementum nibh. Sit amet porttitor eget dolor morbi non arcu. Cras ornare arcu dui vivamus arcu felis. Consectetur adipiscing elit pellentesque habitant. Arcu risus quis varius quam. Sodales ut etiam sit amet nisl purus in mollis.
+      <div className="m-auto max-w-full lg:max-w-90% min-h-[20rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 auto-rows-max gap-6 px-8">
+        <Project name="Portfolio Website" tools="React Next.js Typescript TailwindCSS" url="https://github.com/akhilanganesh/my-portfolio">
+          The website you&apos;re reading right now! Hosted on Vercel with server side rendering (SSR).
         </Project>
-        <Project name="Yodie ISA and Microprocessor (in SystemVerilog and Assembly)">
-          Sample description from here on out yeah everything goes out to everything.
+        <Project name="Snek Compiler" tools="Rust" url="https://github.com/akhilanganesh/snek-compiler">
+          A compiler for the CSE 131 Snek language, which includes types, functions, heap allocation, and more.
         </Project>
-        <Project name="Raytracer (in C++)">
-          Sample description from here on out yeah everything goes out to everything.
+        <Project name="Yodie ISA Design" tools="SystemVerilog Python Quartus QuestaSim" url="https://github.com/KartikeyanSubramanyam/CSE141L-Project">
+          A custom ISA and microprocessor design and implementation that can handle error detection and correction, as well as bit pattern matching.
         </Project>
-        <Project name="Bujo: Web-based Bullet Journal (in web stack)">
-          Sample description from here on out yeah everything goes out to everything.
+        <Project name="Surfstore" tools="Golang gRPC" url="https://github.com/ucsd-cse124-fa22/proj4-akhilanganesh">
+          A networked consistent hash ring for unstructured data that is scalable to a number of nodes/servers.
         </Project>
-        <Project name="Open Journey: A 2D Zelda-esque Game">
-          Sample description from here on out yeah everything goes out to everything.
+        <Project name="Hexcaliber Games" tools="Unity C#" url="https://hexcaliber.dev/" cont={true}>
+          Contributions to Hexcaliber 2D game development.
         </Project>
-        <Project name="Test 6">
-          Sample description from here on out yeah everything goes out to everything.
+        <Project name="Bujo: Web Bullet Journal" tools="HTML CSS Javascript Scrum" url="https://github.com/cse110-sp21-group10/cse110-sp21-group10">
+          Sample description from here on out yeah everything goes out to everything. With the traditional web tech stack.
         </Project>
+        {/* <Project name="Open Journey: 2D Game" tools="Java">
+          A 2D top-down Zelda-esque game built with Javax and Swing API, using an event-driven runtime.
+        </Project> */}
       </div>
     </div>
   );
 }
 
 interface ProjectProps {
-  name: string,
-  children: string,
+  name?: string,
+  url?: string | false,
+  children?: string,
+  tools?: string,
+  cont?: boolean
 }
 
-function Project({ name, children }: ProjectProps) {
+const ProjectPropsDefault : ProjectProps = {
+  name: "",
+  url: false,
+  children: "",
+  tools: "",
+  cont: false,
+}
+
+function Project(props: ProjectProps) {
+  const { name, url, children, tools, cont } = {...ProjectPropsDefault, ...props}
+
   return (
-    <div className="shrink-0 max-w-lg shadow-md bg-slate-100 rounded-md p-6 w-[32rem] max-h-90%">
-      <div className="max-h-full overflow-y-scroll space-y-3">
-        <h3 className="text-2xl text-theme-black font-bold">{name}</h3>
-        <p className="text-xl text-theme-darkgray">{children}</p>
+    <div className="relative shrink-0 bg-theme-color1c rounded-lg p-4 pb-4 md:pb-4 transition duration-1000 hover:-mt-1 hover:mb-1 hover:-ml-1 hover:mr-1 hover:shadow-xl shadow-theme-black">
+      <div className="max-h-full overflow-contain space-y-2">  {/*overflow-y-scroll overscroll-y-contain*/}
+        <div className="text-base md:text-lg text-theme-black flex flex-row space-x-3">
+          {/* <h3 className="text-xl sm:text-2xl -mt-0 z-10 text-theme-black"><FontAwesomeIcon icon={faContribution} className="" /></h3> */}
+          <div className="space-y-2">
+            <div className="flex flex-row place-content-start">
+              { (cont) ? (<FontAwesomeIcon icon={faContribution} className="static mr-2 mt-1" />)
+                  : (<FontAwesomeIcon icon={faCode} className="static mr-2 mt-1" />)
+              }
+              <h3 className="font-bold">{name}</h3>
+            </div>
+            <p className="text-sm md:text-base text-theme-darkgray">{children}</p>
+            <p className={`${robotoMono.className} text-theme-black text-xs sm:text-sm font-semibold pr-7`}>
+              {tools}
+            </p>
+          </div>
+        </div>
       </div>
+      { (url != false) &&
+        <a 
+          href={url}
+          target="_self"
+          rel="noopener noreferrer"
+          className="text-theme-black bg-theme-color2 hover:bg-theme-color2b shadow-sm active:shadow-none shadow-theme-color2/80 hover:shadow-theme-color2b/80  h-12 w-12 absolute -bottom-2 -right-2 rounded-lg z-10 flex items-center justify-center transition duration-300">
+          <FontAwesomeIcon icon={faArrowRight} strokeWidth={0} className="static text-lg sm:text-xl md:text-2xl" />
+        </a>
+      }
     </div>
   )
 }
