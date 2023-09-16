@@ -68,13 +68,13 @@ const config: Config = {
         'theme-lightgray':  colors.gray['300'],
         'theme-gray':       colors.stone['200'],
         'theme-darkgray':   colors.gray['700'],
-        'theme-color1':     colors.cyan['950'],
+        'theme-color1':     '#072c3b',//colors.cyan['950'],
         'theme-color1b':    colors.slate['400'],
         'theme-color1c':    colors.slate['300'],
         'theme-color2':     colors.emerald['400'], // colored
         'theme-color2b':    colors.emerald['200'], // toned
-        'theme-color3':     '#F64740', // colors.rose['600'], // or colors.teal['500']
-        'theme-color3b':    '#FD8A86', // colors.rose['400'],
+        'theme-color3':     colors.red['500'],//'#F64740', // colors.rose['600'], // or colors.teal['500']
+        'theme-color3b':    colors.red['400'],//'#FD8A86', // colors.rose['400'],
         'theme-color4':     colors.cyan['600'],
         'theme-color4b':    colors.cyan['400'],
       },
