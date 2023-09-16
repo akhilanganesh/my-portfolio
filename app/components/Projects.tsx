@@ -70,7 +70,7 @@ function Project(props: ProjectProps) {
               <h3 className="font-bold">{name}</h3>
             </div>
             <p className="text-sm sm:text-base text-theme-darkgray">{children}</p>
-            <p className={`${robotoMono.className} text-theme-black text-xs sm:text-base font-semibold pr-6`}>
+            <p className={`${robotoMono.className} text-theme-black text-xs sm:text-base font-semibold pr-7`}>
               {tools}
             </p>
           </div>

@@ -68,7 +68,7 @@ const config: Config = {
         'theme-lightgray':  colors.gray['300'],
         'theme-gray':       colors.stone['200'],
         'theme-darkgray':   colors.gray['700'],
-        'theme-color1':     '#072c3b',//colors.cyan['950'],
+        'theme-color1':     colors.cyan['950'],
         'theme-color1b':    colors.slate['400'],
         'theme-color1c':    colors.slate['300'],
         'theme-color2':     colors.emerald['400'], // colored
