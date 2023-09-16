@@ -2,11 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin, IconDefinition } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope, faCloudDownload, faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { chakraPetch } from "../layout";
-// import tile from '../assets/hexagon-tile.png'
+import tileImg from '../assets/hexagon-tile.png'
 
 export default function Front() {
   return (
-    <div className="w-screen bg-repeat bg-center" style={{ backgroundImage: "linear-gradient(rgba(8,51,68,0.5), rgba(8,51,68,1)), url('/hexagon-tile.png')" }}>
+    <div className="w-screen bg-repeat bg-center" style={{ backgroundImage: `linear-gradient(rgba(8,51,68,0.5), rgba(8,51,68,1)), url(${tileImg.src})` }}>
       <div className="flex flex-col pt-16 px-2 md:px-0 mx-auto max-w-full min-h-screen">
         <div className="items-center flex flex-col my-auto">
           {/* eslint-disable-next-line @next/next/no-img-element */}
