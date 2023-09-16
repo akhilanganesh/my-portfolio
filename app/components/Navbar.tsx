@@ -1,12 +1,12 @@
 export default function Navbar({ /*currentPage*/ }) {
   return (
-    <nav className="w-full fixed top-0 overflow-hidden bg-theme-color1 border-gray-200 dark:bg-theme-color1 z-50">
+    <nav className="w-full fixed top-0 overflow-hidden bg-transparent z-50">
       <div className="max-w-screen flex flex-wrap items-center justify-between md:mx-auto">
         <a href="/" className="flex items-center">
           <img src='/logo.png' alt="AG" className="w-10 m-3 text-theme-color1" />
           {/* <span className="self-center text-2xl md:text-3xl font-semibold whitespace-nowrap dark:text-theme-color1">AG</span> */}
         </a>
-        <button data-collapse-toggle="navbar-default" type="button" className="bg-theme-color1 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-theme-color1 rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">
+        <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-theme-color1 rounded-lg md:hidden" aria-controls="navbar-default" aria-expanded="false">
           <span className="sr-only">Open menu</span>
           {/* <svg className="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />

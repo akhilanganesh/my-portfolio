@@ -73,9 +73,11 @@ const config: Config = {
         'theme-color1c':    colors.slate['300'],
         'theme-color2':     colors.emerald['400'], // colored
         'theme-color2b':    colors.emerald['200'], // toned
+        'theme-color2c':    colors.emerald['500'],
+        'theme-color2d':    colors.emerald['600'],
         'theme-color3':     colors.red['500'],//'#F64740', // colors.rose['600'], // or colors.teal['500']
         'theme-color3b':    colors.red['400'],//'#FD8A86', // colors.rose['400'],
-        'theme-color4':     colors.cyan['600'],
+        'theme-color4':     colors.emerald['400'],//'#FFBF00',
         'theme-color4b':    colors.cyan['400'],
       },
       keyframes: {

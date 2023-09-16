@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto, Roboto_Mono } from 'next/font/google'
+import { Roboto, Roboto_Mono, Chakra_Petch } from 'next/font/google'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -8,11 +8,28 @@ config.autoAddCss = false;
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: '400'
+  weight: [
+    '300',
+    '400',
+    '500',
+    '700',
+    '900',
+  ]
 })
 
 export const robotoMono = Roboto_Mono({
   subsets: ['latin'],
+})
+
+export const chakraPetch = Chakra_Petch({
+  subsets: ['latin'],
+  weight: [
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+  ]
 })
 
 export const metadata: Metadata = {

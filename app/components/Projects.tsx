@@ -11,7 +11,7 @@ export default function Projects() {
         <h2 className="text-center md:text-left text-3xl sm:text-4xl font-bold text-theme-white">Projects and Contributions</h2>
         <p className="text-lg sm:text-xl text-theme-lightgray">Here&apos;s a list of software projects (<FontAwesomeIcon icon={faCode} className="text-sm sm:text-base" />) and contributions (<FontAwesomeIcon icon={faContribution} className="text-sm sm:text-base" />) I&apos;ve made over the past few years.</p>
       </div>
-      <div className="m-auto max-w-full lg:max-w-90% min-h-[20rem] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:grid-rows-2 auto-rows-max gap-6 px-8">
+      <div className="m-auto max-w-full lg:max-w-90% min-h-[20rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 auto-rows-max gap-6 px-8">
         <Project name="Portfolio Website" tools="React Next.js Typescript TailwindCSS" url="https://github.com/akhilanganesh/my-portfolio">
           The website you&apos;re reading right now! Hosted on Vercel with server side rendering (SSR).
         </Project>
@@ -60,7 +60,7 @@ function Project(props: ProjectProps) {
   return (
     <div className="relative shrink-0 bg-theme-color1c rounded-md p-4 pb-4 md:pb-4 transition duration-300">
       <div className="max-h-full overflow-contain space-y-2">  {/*overflow-y-scroll overscroll-y-contain*/}
-        <div className="text-base sm:text-lg text-theme-black flex flex-row space-x-3">
+        <div className="text-base md:text-lg text-theme-black flex flex-row space-x-3">
           {/* <h3 className="text-xl sm:text-2xl -mt-0 z-10 text-theme-black"><FontAwesomeIcon icon={faContribution} className="" /></h3> */}
           <div className="space-y-2">
             <div className="flex flex-row place-content-start">
@@ -69,8 +69,8 @@ function Project(props: ProjectProps) {
               }
               <h3 className="font-bold">{name}</h3>
             </div>
-            <p className="text-sm sm:text-base text-theme-darkgray">{children}</p>
-            <p className={`${robotoMono.className} text-theme-black text-xs sm:text-base font-semibold pr-7`}>
+            <p className="text-sm md:text-base text-theme-darkgray">{children}</p>
+            <p className={`${robotoMono.className} text-theme-black text-xs sm:text-sm font-semibold pr-7`}>
               {tools}
             </p>
           </div>
@@ -81,8 +81,8 @@ function Project(props: ProjectProps) {
           href={url}
           target="_self"
           rel="noopener noreferrer"
-          className="text-theme-black bg-theme-color2 hover:bg-theme-color2b shadow-md shadow-theme-color2/80 hover:shadow-theme-color2b/80 h-12 w-12 absolute -bottom-2 -right-2 rounded-lg z-10 flex items-center justify-center transition duration-300">
-          <FontAwesomeIcon icon={faArrowRight} className="static text-lg sm:text-xl md:text-2xl" />
+          className="text-theme-black bg-theme-color2 hover:bg-theme-color2b active:bg-theme-color2d shadow-sm active:shadow-none shadow-theme-color2/80 hover:shadow-theme-color2b/80 h-12 w-12 absolute -bottom-2 -right-2 rounded-lg z-10 flex items-center justify-center transition duration-300">
+          <FontAwesomeIcon icon={faArrowRight} strokeWidth={0} className="static text-lg sm:text-xl md:text-2xl" />
         </a>
       }
     </div>
