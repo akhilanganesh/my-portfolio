@@ -72,7 +72,7 @@ const config: Config = {
         'theme-color1b':    colors.slate['400'],
         'theme-color1c':    colors.slate['300'],
         'theme-color2':     colors.emerald['400'], // colored
-        'theme-color2b':    colors.emerald['200'], // toned
+        'theme-color2b':    colors.emerald['300'], // toned
         'theme-color2c':    colors.emerald['500'],
         'theme-color2d':    colors.emerald['600'],
         'theme-color3':     colors.red['500'],//'#F64740', // colors.rose['600'], // or colors.teal['500']

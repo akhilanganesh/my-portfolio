@@ -23,8 +23,8 @@ export default function Front() {
             href="/Akhilan Ganesh Resume.pdf"
             download='Akhilan Ganesh Resume.pdf'
             className={`${chakraPetch.className} text-white bg-theme-color2c inline-block py-2.5 px-5 text-xl xs:text-2xl font-medium rounded-md text-center cursor-pointer no-underline my-auto shadow-lg shadow-theme-black/40
-                    transition duration-150 ease-in hover:motion-safe:animate-none tracking-wide
-                  active:bg-theme-color2d  active:text-theme-white active:shadow-theme-color2d/40 active:motion-safe:animate-none
+                    hover:bg-theme-color2b transition duration-150 ease-in hover:motion-safe:animate-none tracking-wide
+                  active:bg-theme-lightgray  active:text-theme-white active:motion-safe:animate-none
             `}
           > 
             {/* <svg className="w-7 h-7 inline mr-2 -mt-2 -ml-[0.15rem]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
@@ -72,7 +72,7 @@ function Icon({ faicon, url, children, label }: IconProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="shadow-lg shadow-black/50 m-0 bg-theme-color2c/100 rounded-full h-12 w-12 flex items-center justify-center hover:motion-safe:fa-shake focus:motion-safe:fa-shake focus:motion-safe:bg-theme-white/70 active:animate-none active:motion-safe:bg-theme-white/70 transition ease-in duration-150">
+      className="shadow-lg shadow-black/50 m-0 bg-theme-color2c/100 rounded-full h-12 w-12 flex items-center justify-center hover:bg-theme-color2b hover:motion-safe:fa-shake focus:motion-safe:fa-shake focus:motion-safe:bg-theme-lightgray active:animate-none active:motion-safe:bg-theme-lightgray transition ease-in duration-150">
         {
           (faicon !== undefined) ?
           <FontAwesomeIcon icon={faicon} size="2x" className="text-theme-white" /> :
