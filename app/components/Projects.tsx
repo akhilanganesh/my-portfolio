@@ -33,7 +33,7 @@ export default function Projects() {
           Contributions to Hexcaliber 2D game development.
         </Project>
         <Project name="Bujo: Web Bullet Journal" tools="HTML CSS Javascript Scrum" url="https://github.com/cse110-sp21-group10/cse110-sp21-group10">
-          Sample description from here on out yeah everything goes out to everything. With the traditional web tech stack.
+          A bullet journal website that can store tasks, notes, and events. Built by an 8-person team with the traditional web tech stack.
         </Project>
         {/* <Project name="Open Journey: 2D Game" tools="Java">
           A 2D top-down Zelda-esque game built with Javax and Swing API, using an event-driven runtime.
