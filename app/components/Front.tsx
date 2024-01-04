@@ -46,7 +46,7 @@ export default function Front() {
                 <path d="M3 5.012H0V15h3V5.012Z" />
               </svg>
             </Icon>
-            <Icon faicon={faEnvelope} url="mailto:aganesh.work@email.com">
+            <Icon faicon={faEnvelope} url="mailto:aganesh.work@gmail.com">
             </Icon>
           </div>
         </div>
