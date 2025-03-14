@@ -8,7 +8,7 @@ import SocialIcon from "./SocialIcon"
 
 export default function Front() {
   return (
-    <div className="w-screen h-screen relative overflow-hidden">
+    <div className="w-full h-screen relative overflow-hidden">
       {/* Base layers (lowest) */}
       
       {/* Combined background with hexagon texture and enhanced radial gradient */}

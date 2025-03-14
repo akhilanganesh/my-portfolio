@@ -49,7 +49,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head> */}
-      <body className={`${roboto.className} bg-theme-color1 relative`} style={{ 
+      <body className={`${roboto.className} bg-theme-color1 relative overflow-x-hidden`} style={{ 
         backgroundImage: `
           radial-gradient(ellipse at center, transparent 0%, transparent 100%), 
           linear-gradient(to bottom, rgba(8,51,68,0.02) 0%, rgba(8,51,68,0.02) 100%)
