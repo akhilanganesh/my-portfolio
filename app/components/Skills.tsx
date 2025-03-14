@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faServer, faDatabase, faTools, faCloud, faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-import { robotoMono } from "../layout";
+import { robotoMono } from "../fonts";
 import SkillCarousel from "./SkillCarousel";
 
 export default function Skills() {

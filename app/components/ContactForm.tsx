@@ -4,14 +4,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faPaperPlane, faSpinner, faCheck, faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
-import { Roboto_Mono } from 'next/font/google';
-
-// Initialize the font
-const robotoMono = Roboto_Mono({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  display: 'swap',
-});
+import { robotoMono } from '../fonts';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');

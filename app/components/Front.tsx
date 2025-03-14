@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin, IconDefinition } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope, faCloudDownload, faArrowDown } from "@fortawesome/free-solid-svg-icons"
-import { chakraPetch } from "../layout";
+import { chakraPetch } from "../fonts";
 import tileImg from '../assets/hexagon-tile.png'
 import ScrollDownButton from "./ScrollDownButton"
 import SocialIcon from "./SocialIcon"

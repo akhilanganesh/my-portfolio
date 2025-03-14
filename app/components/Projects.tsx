@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faHandshakeSimple, faCode, faArrowRight, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
-import { robotoMono } from "../layout";
+import { robotoMono } from "../fonts";
 
 const faContribution = faHandshakeSimple;
 
