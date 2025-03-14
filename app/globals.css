@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Set html and body to 100% height for proper container sizing */
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* 
 :root {
   --foreground: black;
@@ -25,4 +33,218 @@ body {
   /* color: var(--foreground);
   background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
-} 
+}
+
+@keyframes float-slow {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateY(-8px) translateX(10px) rotate(1deg) scale(1.03);
+  }
+  40% {
+    transform: translateY(-15px) translateX(-6px) rotate(-1.5deg) scale(1.05);
+  }
+  60% {
+    transform: translateY(-12px) translateX(12px) rotate(0.5deg) scale(1.04);
+  }
+  80% {
+    transform: translateY(-18px) translateX(4px) rotate(-0.5deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float-medium {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-25px) translateX(-22px) rotate(-2deg) scale(1.08);
+  }
+  50% {
+    transform: translateY(-40px) translateX(15px) rotate(3deg) scale(1.12);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-28px) rotate(-1deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float-fast {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translateY(-35px) translateX(28px) rotate(3deg) scale(1.1);
+  }
+  30% {
+    transform: translateY(-15px) translateX(-22px) rotate(-4deg) scale(1.15);
+  }
+  45% {
+    transform: translateY(-50px) translateX(12px) rotate(2deg) scale(1.08);
+  }
+  60% {
+    transform: translateY(-28px) translateX(35px) rotate(-2deg) scale(1.12);
+  }
+  75% {
+    transform: translateY(-45px) translateX(-15px) rotate(4deg) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes float-very-slow {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) translateX(8px) rotate(0.75deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(-14px) translateX(-8px) rotate(-1deg) scale(1.04);
+  }
+  75% {
+    transform: translateY(-8px) translateX(-10px) rotate(0.5deg) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+.float-slow {
+  animation: float-slow 15s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-medium {
+  animation: float-medium 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-fast {
+  animation: float-fast 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-very-slow {
+  animation: float-very-slow 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.delay-1 {
+  animation-delay: -1s;
+}
+
+.delay-2 {
+  animation-delay: -2s;
+}
+
+.delay-3 {
+  animation-delay: -3s;
+}
+
+.delay-4 {
+  animation-delay: -4s;
+}
+
+.delay-5 {
+  animation-delay: -5s;
+}
+
+.delay-6 {
+  animation-delay: -6s;
+}
+
+.delay-7 {
+  animation-delay: -7s;
+}
+
+/* Additional random delays for more variation */
+.delay-0-5 {
+  animation-delay: -0.5s;
+}
+
+.delay-1-5 {
+  animation-delay: -1.5s;
+}
+
+.delay-2-5 {
+  animation-delay: -2.5s;
+}
+
+.delay-3-5 {
+  animation-delay: -3.5s;
+}
+
+.delay-4-5 {
+  animation-delay: -4.5s;
+}
+
+.delay-5-5 {
+  animation-delay: -5.5s;
+}
+
+.delay-6-5 {
+  animation-delay: -6.5s;
+}
+
+@keyframes heartbeat2 {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.8;
+    filter: blur(30px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(40px);
+  }
+  100% {
+    opacity: 0.8;
+    filter: blur(30px);
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
+.glow-pulse-slow {
+  animation: glow-pulse 12s ease-in-out infinite;
+}

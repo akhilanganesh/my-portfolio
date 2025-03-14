@@ -1,6 +1,6 @@
-export default function Navbar({ /*currentPage*/ }) {
+export default function Navbar({ className = "" }) {
   return (
-    <nav className="w-full fixed top-0 overflow-hidden bg-transparent z-50">
+    <nav className={`w-full fixed top-0 overflow-hidden bg-transparent z-50 ${className}`}>
       <div className="max-w-screen flex flex-wrap items-center justify-between md:mx-auto">
         <a href="/" className="flex items-center">
           <img src='/logo.png' alt="AG" className="w-10 m-3 text-theme-color1" />

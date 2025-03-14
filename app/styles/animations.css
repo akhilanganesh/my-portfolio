@@ -1,0 +1,115 @@
+/* Float animations for bubbles and atmospheric effects */
+@keyframes float-slow {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-10px) translateX(5px); }
+  50% { transform: translateY(0) translateX(10px); }
+  75% { transform: translateY(10px) translateX(5px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes float-medium {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-15px) translateX(8px); }
+  50% { transform: translateY(0) translateX(15px); }
+  75% { transform: translateY(15px) translateX(8px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+@keyframes float-fast {
+  0% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-20px) translateX(10px); }
+  50% { transform: translateY(0) translateX(20px); }
+  75% { transform: translateY(20px) translateX(10px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+/* Glow pulse animations for atmospheric effects */
+@keyframes glow-pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+@keyframes glow-pulse-slow {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.6; }
+}
+
+/* Apply animations to classes */
+.float-slow {
+  animation: float-slow 20s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: float-medium 15s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: float-fast 10s ease-in-out infinite;
+}
+
+.glow-pulse {
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
+.glow-pulse-slow {
+  animation: glow-pulse-slow 12s ease-in-out infinite;
+}
+
+/* Delay classes */
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.delay-1-5 {
+  animation-delay: 1.5s;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
+.delay-2-5 {
+  animation-delay: 2.5s;
+}
+
+.delay-3 {
+  animation-delay: 3s;
+}
+
+.delay-3-5 {
+  animation-delay: 3.5s;
+}
+
+.delay-4 {
+  animation-delay: 4s;
+}
+
+.delay-4-5 {
+  animation-delay: 4.5s;
+}
+
+.delay-5 {
+  animation-delay: 5s;
+}
+
+.delay-5-5 {
+  animation-delay: 5.5s;
+}
+
+.delay-6 {
+  animation-delay: 6s;
+}
+
+.delay-6-5 {
+  animation-delay: 6.5s;
+}
+
+.delay-7 {
+  animation-delay: 7s;
+}
+
+.delay-7-5 {
+  animation-delay: 7.5s;
+} 
