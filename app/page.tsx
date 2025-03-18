@@ -9,7 +9,6 @@ import Navbar from './components/Navbar';
 import SectionDivider from './components/effects/SectionDivider';
 import AtmosphericEffects from './components/effects/AtmosphericEffects';
 import Bubbles from './components/effects/Bubbles';
-import LowerBubbles from './components/effects/LowerBubbles';
 
 export default function Home() {
   return (
@@ -28,11 +27,6 @@ export default function Home() {
         {/* Atmospheric effects positioned to overlap from About to Contact */}
         <div className="absolute inset-0 w-full h-full z-10" style={{ height: '100%', overflow: 'hidden' }}>
           <AtmosphericEffects />
-        </div>
-        
-        {/* Lower bubbles effects positioned to overlap from About to Contact */}
-        <div className="absolute inset-0 w-full h-full z-20" style={{ height: '100%', overflow: 'hidden' }}>
-          <LowerBubbles />
         </div>
         
         <div className="space-y-20 relative z-30">

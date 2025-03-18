@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { roboto } from './fonts'
+import { PerformanceProvider } from './context/PerformanceContext'
+import PerformanceToggle from './components/PerformanceToggle'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -55,7 +57,12 @@ export default function RootLayout({
           linear-gradient(to bottom, rgba(8,51,68,0.02) 0%, rgba(8,51,68,0.02) 100%)
         `,
         backgroundBlendMode: 'overlay'
-      }}>{children}</body>
+      }}>
+        <PerformanceProvider>
+          {children}
+          <PerformanceToggle fixed={true} showLabel={true} />
+        </PerformanceProvider>
+      </body>
     </html>
   )
 }

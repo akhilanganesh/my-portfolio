@@ -96,10 +96,10 @@ export default function SkillCarousel({ children, autoScrollInterval = 5000 }: S
   return (
     <div className="relative flex flex-col">
       {/* Carousel content with navigation arrows */}
-      <div className="relative flex items-center w-full max-w-full sm:max-w-xl md:max-w-2xl mx-auto">
+      <div className="relative flex items-center w-full max-w-full sm:max-w-xl md:max-w-2xl mx-auto px-4 sm:px-8">
         <button 
           onClick={prevSlide}
-          className="absolute -left-2 sm:-left-6 md:-left-10 z-40 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-theme-black/30 border border-theme-white/20 flex items-center justify-center text-theme-white/70 hover:bg-theme-black/40 hover:text-theme-white transition-all duration-200 backdrop-blur-sm hover:scale-110"
+          className="absolute left-[-1.5rem] sm:left-[-2rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-theme-black/70 rounded-full flex items-center justify-center text-theme-white transition-all duration-200 hover:scale-110 z-40"
         >
           <FontAwesomeIcon icon={faChevronLeft} className="text-sm sm:text-lg" />
         </button>
@@ -129,7 +129,7 @@ export default function SkillCarousel({ children, autoScrollInterval = 5000 }: S
 
         <button 
           onClick={handleNextClick}
-          className="absolute -right-2 sm:-right-6 md:-right-10 z-40 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-theme-black/30 border border-theme-white/20 flex items-center justify-center text-theme-white/70 hover:bg-theme-black/40 hover:text-theme-white transition-all duration-200 backdrop-blur-sm hover:scale-110"
+          className="absolute right-[-1.5rem] sm:right-[-2rem] top-1/2 -translate-y-1/2 w-12 h-12 bg-theme-black/70 rounded-full flex items-center justify-center text-theme-white transition-all duration-200 hover:scale-110 z-40"
         >
           <FontAwesomeIcon icon={faChevronRight} className="text-sm sm:text-lg" />
         </button>

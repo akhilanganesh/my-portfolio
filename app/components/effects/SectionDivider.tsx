@@ -30,9 +30,6 @@ export default function SectionDivider({ className = '' }: SectionDividerProps) 
           <div className="h-[1.5px] bg-gradient-to-r from-transparent via-theme-white/30 to-transparent flex-grow"></div>
         </div>
         
-        {/* Blurred background elements */}
-        <div className="absolute -z-10 w-32 h-32 rounded-full bg-theme-color2/10 blur-3xl left-1/3 transform -translate-x-1/2"></div>
-        <div className="absolute -z-10 w-32 h-32 rounded-full bg-theme-color1/10 blur-3xl right-1/3 transform translate-x-1/2"></div>
       </div>
     </div>
   );

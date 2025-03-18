@@ -1,17 +1,22 @@
+'use client'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faLinkedin, IconDefinition } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope, faCloudDownload, faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { chakraPetch } from "../fonts";
 import tileImg from '../assets/hexagon-tile.png'
 import ScrollDownButton from "./ScrollDownButton"
 import SocialIcon from "./SocialIcon"
+import { usePerformance } from "../context/PerformanceContext"
+import PerformanceToggle from "./PerformanceToggle"
 
 export default function Front() {
+  // Use the performance context instead of local state
+  const { isHighPerformanceMode } = usePerformance();
+
   return (
     <div className="w-full h-screen relative overflow-hidden">
-      {/* Base layers (lowest) */}
-      
-      {/* Combined background with hexagon texture and enhanced radial gradient */}
+      {/* Optimized background layer with combined effects */}
       <div 
         className="absolute inset-0 bg-repeat bg-center opacity-100 -z-10"
         style={{ 
@@ -31,34 +36,69 @@ export default function Front() {
         }}
       ></div>
       
-      {/* Gradient overlays - with deeper negative z-index to appear below glows and bubbles */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-theme-color1 pointer-events-none -z-30"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent via-transparent to-theme-color1 pointer-events-none -z-30"></div>
+      {/* Combined gradient overlays - merged multiple gradients into one element */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full pointer-events-none -z-30"
+        style={{
+          background: `
+            linear-gradient(to bottom, transparent 50%, var(--theme-color1) 100%),
+            linear-gradient(to bottom right, transparent 50%, var(--theme-color1) 100%)
+          `
+        }}
+      ></div>
       
       {/* Solid color at the bottom to ensure 100% coverage */}
       <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-theme-color1 pointer-events-none -z-30"></div>
       
-      {/* Redesigned glows with emerald and cyan accents to match theme */}
-      <div className="absolute top-[0vh] -right-[5vw] w-[60vw] h-[60vh] rounded-full bg-gradient-radial from-emerald-400/[0.08] to-transparent blur-3xl z-5 float-very-slow delay-2"></div>
-      <div className="absolute top-[10vh] right-[20vw] w-[45vw] h-[45vh] rounded-full bg-gradient-radial from-cyan-500/[0.06] to-transparent blur-3xl z-5 float-slow delay-5-5"></div>
-      
-      {/* Left side glows for balance */}
-      <div className="absolute top-[15vh] left-[10vw] w-[40vw] h-[40vh] rounded-full bg-gradient-radial from-emerald-500/[0.05] to-transparent blur-3xl z-5 float-medium delay-3"></div>
-      <div className="absolute top-[25vh] left-[15vw] w-[30vw] h-[30vh] rounded-full bg-gradient-radial from-cyan-400/[0.04] to-transparent blur-3xl z-5 float-slow delay-1-5"></div>
-      
-      {/* Brighter accent glows */}
-      <div className="absolute top-[18vh] right-[25vw] w-[35vw] h-[35vh] rounded-full bg-gradient-radial from-emerald-300/[0.12] to-transparent blur-3xl z-5 float-medium delay-4-5"></div>
-      <div className="absolute top-[20vh] right-[27vw] w-[25vw] h-[25vh] rounded-full bg-gradient-radial from-cyan-400/[0.15] to-transparent blur-2xl z-5 float-slow delay-2-5"></div>
-      <div className="absolute top-[22vh] right-[28vw] w-[15vw] h-[15vh] rounded-full bg-gradient-radial from-white/[0.18] to-transparent blur-xl z-5 glow-pulse"></div>
-      
-      {/* Subtle color accents */}
-      <div className="absolute top-[30vh] left-[30vw] w-[20vw] h-[20vh] rounded-full bg-gradient-radial from-emerald-400/[0.07] to-transparent blur-2xl z-5 float-medium delay-6"></div>
-      <div className="absolute top-[35vh] right-[40vw] w-[18vw] h-[18vh] rounded-full bg-gradient-radial from-cyan-500/[0.06] to-transparent blur-2xl z-5 float-slow delay-3-5"></div>
-      
-      {/* New glows - positioned above 10% from bottom */}
-      <div className="absolute top-[45vh] left-[15vw] w-[40vw] h-[40vh] rounded-full bg-gradient-radial from-emerald-400/[0.09] to-transparent blur-3xl z-5 float-slow delay-4"></div>
-      <div className="absolute top-[48vh] right-[20vw] w-[35vw] h-[35vh] rounded-full bg-gradient-radial from-cyan-500/[0.07] to-transparent blur-3xl z-5 float-medium delay-2-5"></div>
-      <div className="absolute top-[40vh] left-[40vw] w-[25vw] h-[25vh] rounded-full bg-gradient-radial from-emerald-300/[0.1] via-cyan-400/[0.05] to-transparent blur-2xl z-5 float-very-slow delay-3-5"></div>
+      {/* Conditionally render decorative elements based on performance mode */}
+      {true && (
+        <>
+          {/* Optimized glows - combined similar glows and reduced total count */}
+          <div 
+            className="absolute top-[0vh] -right-[5vw] w-[60vw] h-[60vh] rounded-full z-5 float-very-slow delay-2"
+            style={{
+              background: 'radial-gradient(circle, rgba(52,211,153,0.08) 0%, transparent 70%)',
+              filter: 'blur(40px)'
+            }}
+          ></div>
+          
+          {/* Combined left side glows */}
+          <div 
+            className="absolute top-[15vh] left-[10vw] w-[40vw] h-[40vh] rounded-full z-5 float-medium delay-3"
+            style={{
+              background: 'radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%)',
+              filter: 'blur(40px)'
+            }}
+          ></div>
+          
+          {/* Combined accent glows */}
+          <div 
+            className="absolute top-[18vh] right-[25vw] w-[35vw] h-[35vh] rounded-full z-5 float-medium delay-4-5"
+            style={{
+              background: `
+                radial-gradient(circle, rgba(110,231,183,0.12) 0%, transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(56,189,248,0.15) 0%, transparent 60%)
+              `,
+              filter: 'blur(35px)'
+            }}
+          ></div>
+          
+          {/* Highlight glow with pulse animation */}
+          <div className="absolute top-[22vh] right-[28vw] w-[15vw] h-[15vh] rounded-full bg-gradient-radial from-white/[0.18] to-transparent blur-xl z-5 glow-pulse"></div>
+          
+          {/* Combined lower glows */}
+          <div 
+            className="absolute top-[40vh] left-[25vw] w-[50vw] h-[50vh] rounded-full z-5 float-slow delay-3-5"
+            style={{
+              background: `
+                radial-gradient(circle at 30% 50%, rgba(52,211,153,0.09) 0%, transparent 70%),
+                radial-gradient(circle at 70% 50%, rgba(6,182,212,0.07) 0%, transparent 70%)
+              `,
+              filter: 'blur(40px)'
+            }}
+          ></div>
+        </>
+      )}
       
       {/* Content container */}
       <div className="flex flex-col pt-16 px-2 md:px-0 mx-auto max-w-full min-h-screen relative z-30">
@@ -73,17 +113,27 @@ export default function Front() {
             <p className="text-theme-lightgray text-left tracking-normal"></p>
           </div>
 
-          <div className="float-very-slow">
+          <div className="relative">
             <a
               href="/Akhilan Ganesh Resume.pdf"
               download='Akhilan Ganesh Resume.pdf'
               className={`${chakraPetch.className} text-white inline-block py-3 px-6 text-xl xs:text-2xl font-medium text-center cursor-pointer no-underline my-auto relative z-30
-                      hover:motion-safe:animate-none tracking-wide
-                    active:bg-theme-lightgray active:text-theme-white active:motion-safe:animate-none
-                    group transition-all duration-300
+                      tracking-wide
+                    active:bg-theme-lightgray active:text-theme-white
+                    group transition-transform duration-300
               `}
+              style={{ 
+                animation: isHighPerformanceMode ? 'float-very-slow 18s ease-in-out infinite' : 'none',
+                transform: 'translateZ(0)' // Force GPU acceleration
+              }}
             > 
-              <div className="absolute inset-0 bg-gradient-to-br from-theme-color2/80 to-theme-color2d/90 backdrop-blur-sm rounded-full border border-theme-white/40 shadow-lg shadow-theme-color2/30 transition-all duration-300 group-hover:from-theme-color2b/90 group-hover:to-theme-color2c/95 group-hover:scale-105"></div>
+              {/* Performance-optimized hover using transform and opacity (GPU-accelerated properties) */}
+              <div 
+                className="absolute inset-0 bg-gradient-to-br from-theme-color2/80 to-theme-color2d/90 rounded-full border border-theme-white/40 shadow-lg shadow-theme-color2/30 transition-transform duration-300 will-change-transform group-hover:scale-105 group-hover:brightness-110"
+                style={{
+                  transform: 'translateZ(0)' // Force GPU acceleration
+                }}
+              ></div>
               <div className="absolute inset-0 bg-theme-color2/15 blur-md rounded-full"></div>
               <span className="relative flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="w-6 h-6 sm:w-7 sm:h-7 inline mr-2 -mt-1">
@@ -95,13 +145,13 @@ export default function Front() {
           </div>
 
           <div className="flex flex-row space-x-5 mt-8 relative z-30">
-            <div className="float-very-slow">
+            <div className="relative">
               <SocialIcon icon={faGithub} url="https://github.com/akhilanganesh" />
             </div>
-            <div className="float-very-slow delay-2">
+            <div className="relative">
               <SocialIcon icon={faLinkedin} url="https://www.linkedin.com/in/akhilanganesh/" />
             </div>
-            <div className="float-very-slow delay-4">
+            <div className="relative">
               <SocialIcon icon={faEnvelope} url="#contact" scroll={true} />
             </div>
           </div>
@@ -110,6 +160,8 @@ export default function Front() {
         <div className="relative z-10 self-center mt-8 mb-16">
           <ScrollDownButton />
         </div>
+        
+        {/* Performance mode toggle is now fixed in the component itself */}
       </div>
     </div>
   )

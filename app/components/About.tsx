@@ -3,7 +3,7 @@ export default function About() {
   return (
     <div className="-mt-10 flex flex-col md:flex-row md:space-x-2 w-full px-3 sm:px-0 sm:max-w-90% md:max-w-80% mx-auto text-theme-white relative z-30">
       <div className="text-base sm:text-lg md:basis-2/3 flex-col space-y-4">
-        <div className="backdrop-blur-sm bg-gradient-to-br from-theme-black/30 to-theme-black/20 border-2 border-theme-white/30 mx-0 sm:-mx-3 p-4 sm:p-6 flex flex-col text-theme-lightgray space-y-4 rounded-2xl shadow-lg shadow-theme-black/30 hover:bg-gradient-to-br hover:from-theme-black/40 hover:to-theme-black/30 hover:border-theme-white/40 transition duration-300 relative overflow-hidden z-30">
+        <div className="bg-gradient-to-br from-theme-black/60 to-theme-black/50 border-2 border-theme-white/30 mx-0 sm:-mx-3 p-4 sm:p-6 flex flex-col text-theme-lightgray space-y-4 rounded-2xl shadow-lg shadow-theme-black/30 hover:bg-gradient-to-br hover:from-theme-black/70 hover:to-theme-black/60 hover:border-theme-white/40 transition duration-300 relative overflow-hidden z-30">
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-theme-color2/15 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-theme-color1/15 rounded-full blur-3xl"></div>
           
